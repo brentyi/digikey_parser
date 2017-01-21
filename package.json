@@ -1,6 +1,6 @@
 {
   "name": "digikey_parser",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A helper for loading electronic component information from Digikey barcode numbers.",
   "main": "DigikeyParser.js",
   "scripts": {

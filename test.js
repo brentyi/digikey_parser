@@ -1,5 +1,5 @@
-const DigikeyPart = require('./DigikeyParser.js');
+const DigikeyParser = require('./DigikeyParser.js');
 
-DigikeyPart(5026370, function(obj) {
-    console.log(obj);
+DigikeyParser(5026370, function(data) {
+    console.log(data);
 });

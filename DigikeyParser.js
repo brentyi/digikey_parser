@@ -8,7 +8,7 @@ module.exports = function(barcode, cb) {
 
     var url = 'http://www.digikey.com/product-detail/en/x/x/x/' + barcode;
     request.get(url, function (error, response, body) {
-        var obj;
+        var data;
         if (!error && response.statusCode == 200) {
             body = body.split('Product Overview')[1];
             body = body.split('</table>')[0];
@@ -22,12 +22,12 @@ module.exports = function(barcode, cb) {
                 return output.trim();
             }
 
-            obj = {
+            data = {
                 manufacturer: getAttribute('Manufacturer'),
                 partNumber: getAttribute('Manufacturer Part Number'),
                 description: getAttribute('Description')
             };
         }
-        cb(obj);
+        cb(data);
     });
 };
