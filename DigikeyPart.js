@@ -1,11 +1,12 @@
 var request = require('request');
 
 module.exports = function(barcode, cb) {
+    barcode = String(barcode);
     if (barcode.length > 7) {
         barcode = barcode.substring(0, 7);
     }
 
-    var url = 'http://www.digikey.com/product-detail/en/x/x/x/' + barcode
+    var url = 'http://www.digikey.com/product-detail/en/x/x/x/' + barcode;
     request.get(url, function (error, response, body) {
         var obj;
         if (!error && response.statusCode == 200) {
@@ -25,7 +26,7 @@ module.exports = function(barcode, cb) {
                 manufacturer: getAttribute('Manufacturer'),
                 partNumber: getAttribute('Manufacturer Part Number'),
                 description: getAttribute('Description')
-            }
+            };
         }
         cb(obj);
     });
