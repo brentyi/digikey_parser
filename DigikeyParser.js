@@ -17,7 +17,6 @@ module.exports = function(barcode, cb) {
                 var output = body.split('<th>' + attr + '</th>')[1];
                 output = output.split('</td>')[0];
                 output = output.replace(/<[^>]*>/g, '');
-                output = output.replace(/\r\n/g, '');
 
                 return output.trim();
             }
