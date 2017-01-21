@@ -1,18 +1,21 @@
 {
-  "name": "node_digikey_parser",
+  "name": "digikey_parser",
   "version": "0.0.1",
-  "description": "",
-  "main": "app.js",
+  "description": "A helper for loading electronic component information from Digikey barcode numbers.",
+  "main": "DigikeyParser.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/brentyi/node_digikey_parser.git"
+    "url": "git://github.com/brentyi/digikey_parser.git"
   },
   "author": "brent",
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/brentyi/node_digikey_parser/issues"
+    "url": "https://github.com/brentyi/digikey_parser/issues"
+  },
+  "dependencies": {
+    "request": "^2.79.0"
   }
 }
